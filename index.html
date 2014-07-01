@@ -2,8 +2,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Simple World Cup App</title>
-</head>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+  <style href="bower_components/bootstrap/dist/bootstrap.css"></style>
+  <script type="text/javascript" src="matches.js"></script>
 <body>
-
+  <div class="matches">
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="match">
+        <div id="time">{{time_left}}</div>
+        <div class="score">
+          <div id="first_team">
+            <div id="first_team_flag">{{first_team_name}}</div>
+            <span id="first_team_goals">{{first_team_goals}}</span>
+          </div>
+          <div id="second_team">
+            <div id="second_team_flag">{{second_team_name}}</div>
+            <span id="second_team_goals">{{second_team_goals}}</span>
+          </div>
+        </div>
+      </div>
+    </script>
+  </div>
 </body>
 </html>
